@@ -8,10 +8,6 @@
 package frc.robot;
 
 import com.nrg948.dashboard.annotations.DashboardTab;
-import com.pathplanner.lib.auto.AutoBuilder;
-
-import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
@@ -27,9 +23,6 @@ import frc.robot.subsystems.Swerve;
  * subsystems, commands, and trigger mappings) should be declared here.
  */
 public class RobotContainer {
-
-  private final SendableChooser<Command> autoChooser;
-
 
   public enum RobotSelector {
     PracticeRobot2025,
@@ -47,8 +40,6 @@ public class RobotContainer {
     drivetrain.setDefaultCommand(new DriveUsingController(drivetrain, driverController));
     // Configure the trigger bindings
     configureBindings();
-     autoChooser = AutoBuilder.buildAutoChooser();
-    SmartDashboard.putData("Auto Chooser", autoChooser);
     RobotContainerDashboardTabs.bind(this);
   }
 
@@ -72,6 +63,6 @@ public class RobotContainer {
    * @return the command to run in autonomous
    */
   public Command getAutonomousCommand() {
-     return autoChooser.getSelected();
+    return Commands.none();
   }
 }

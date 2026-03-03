@@ -7,19 +7,19 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Hub Start to Neutral Start"
+            "pathName": "Trench Start to Close Neutral Start"
           }
         },
         {
           "type": "path",
           "data": {
-            "pathName": "Neutral Start to Neutral End"
+            "pathName": "Close Neutral Start to Close Neutral End"
           }
         },
         {
           "type": "path",
           "data": {
-            "pathName": "Neutral End to Scoring Point"
+            "pathName": "Close Neutral End to Scoring Point"
           }
         },
         {
@@ -35,7 +35,7 @@
               {
                 "type": "wait",
                 "data": {
-                  "waitTime": 5.0
+                  "waitTime": 4.0
                 }
               }
             ]
@@ -72,7 +72,7 @@
               {
                 "type": "wait",
                 "data": {
-                  "waitTime": 5.0
+                  "waitTime": 4.0
                 }
               }
             ]

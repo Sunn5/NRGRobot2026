@@ -35,7 +35,7 @@
               {
                 "type": "wait",
                 "data": {
-                  "waitTime": 5.0
+                  "waitTime": 3.0
                 }
               }
             ]
@@ -44,19 +44,19 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Scoring Point to Close Neutral Start"
+            "pathName": "Scoring Point to Outpost"
+          }
+        },
+        {
+          "type": "wait",
+          "data": {
+            "waitTime": 2.0
           }
         },
         {
           "type": "path",
           "data": {
-            "pathName": "Close Neutral Start to Close Neutral End"
-          }
-        },
-        {
-          "type": "path",
-          "data": {
-            "pathName": "Close Neutral End to Scoring Point"
+            "pathName": "Outpost to Scoring Point"
           }
         },
         {

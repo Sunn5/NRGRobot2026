@@ -7,7 +7,7 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Hub Start to Neutral Start"
+            "pathName": "Trench Start to Neutral Start"
           }
         },
         {
@@ -23,6 +23,12 @@
           }
         },
         {
+          "type": "wait",
+          "data": {
+            "waitTime": 0.1
+          }
+        },
+        {
           "type": "race",
           "data": {
             "commands": [
@@ -35,7 +41,7 @@
               {
                 "type": "wait",
                 "data": {
-                  "waitTime": 5.0
+                  "waitTime": 4.0
                 }
               }
             ]
@@ -44,19 +50,19 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Scoring Point to Close Neutral Start"
+            "pathName": "Scoring Point to Neutral End"
           }
         },
         {
           "type": "path",
           "data": {
-            "pathName": "Close Neutral Start to Close Neutral End"
+            "pathName": "Close Neutral Start to Close Opposite Neutral"
           }
         },
         {
           "type": "path",
           "data": {
-            "pathName": "Close Neutral End to Scoring Point"
+            "pathName": "Close Opposite Neutral End to Opposite Scoring Point"
           }
         },
         {
@@ -72,7 +78,7 @@
               {
                 "type": "wait",
                 "data": {
-                  "waitTime": 5.0
+                  "waitTime": 4.0
                 }
               }
             ]

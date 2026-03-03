@@ -7,32 +7,19 @@
         {
           "type": "path",
           "data": {
-            "pathName": "Right Hub Start to Right Shallow Neutral Start"
-          }
-        },
-        {
-          "type": "race",
-          "data": {
-            "commands": [
-              {
-                "type": "path",
-                "data": {
-                  "pathName": "Right Shallow Neutral Start to Left Shallow Neutral End"
-                }
-              },
-              {
-                "type": "named",
-                "data": {
-                  "name": "ExtendAndIntake"
-                }
-              }
-            ]
+            "pathName": "Trench Start to Shallow Neutral Start"
           }
         },
         {
           "type": "path",
           "data": {
-            "pathName": "Left Shallow Neutral End to Left Scoring Point"
+            "pathName": "Shallow Neutral Start to Shallow Neutral End"
+          }
+        },
+        {
+          "type": "path",
+          "data": {
+            "pathName": "Opposite Shallow Neutral End to Opposite Scoring Point"
           }
         },
         {

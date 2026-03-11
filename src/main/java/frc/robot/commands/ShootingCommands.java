@@ -27,7 +27,7 @@ public final class ShootingCommands {
     Intake intake = subsystems.intake;
     return Commands.sequence(
         Commands.idle(indexer, shooter, intake, hopper)
-            .until(() -> drivetrain.getDistanceToHub() <= Shooter.MAXIMUM_SHOOTING_RANGE),
+            .until(() -> drivetrain.getDistanceToHub() <= Shooter.MAX_SHOOTING_DISTANCE),
         shoot(subsystems));
   }
 
@@ -53,7 +53,7 @@ public final class ShootingCommands {
 
     return Commands.parallel(
             Commands.run(() -> shooter.setGoalDistance(distance.getAsDouble()), shooter),
-            feedBallsToShooter(subsystems, true))
+            feedBallsToShooter(subsystems, shouldWaitForHubAlign))
         .finallyDo(
             () -> {
               shooter.disable();

@@ -18,6 +18,7 @@ import frc.robot.subsystems.Subsystems;
 /** A utility class for controlling the intake. */
 public final class IntakeCommands {
 
+  private static final double MINIMUM_SAFE_INTAKE_ANGLE = Math.toRadians(15);
   private static final double AGITATE_WAIT_TIME = 0.25;
 
   /**
@@ -65,6 +66,18 @@ public final class IntakeCommands {
   public static Command autoIntake(Subsystems subsystems) {
     Intake intake = subsystems.intake;
     return Commands.runOnce(intake::intake, intake);
+  }
+
+  public static Command extendAndIntakeWhenSafe(Subsystems subsystems) {
+    IntakeArm intakeArm = subsystems.intakeArm;
+    return Commands.sequence(
+        setIntakeArmAngle(subsystems, IntakeArm.EXTENDED_ANGLE),
+        Commands.idle(subsystems.intakeArm)
+            .until(
+                () -> {
+                  return intakeArm.getCurrentAngle() < MINIMUM_SAFE_INTAKE_ANGLE;
+                }),
+        intake(subsystems));
   }
 
   public static Command disableIntake(Subsystems subsystems) {

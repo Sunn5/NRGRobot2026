@@ -8,55 +8,43 @@
       },
       "prevControl": null,
       "nextControl": {
-        "x": 2.9661610157787064,
-        "y": 2.7954220837386905
+        "x": 1.7899444444444446,
+        "y": 1.5111888888888878
       },
       "isLocked": false,
       "linkedName": "Scoring Point"
     },
     {
       "anchor": {
-        "x": 4.781488888888889,
-        "y": 2.4076777777777774
+        "x": 0.55,
+        "y": 0.72
       },
       "prevControl": {
-        "x": 3.938136414900655,
-        "y": 2.427521365401031
-      },
-      "nextControl": {
-        "x": 5.609766666666667,
-        "y": 2.3881888888888874
-      },
-      "isLocked": false,
-      "linkedName": null
-    },
-    {
-      "anchor": {
-        "x": 7.76,
-        "y": 3.6
-      },
-      "prevControl": {
-        "x": 7.174155555555555,
-        "y": 2.758477777777778
+        "x": 1.8069585241689832,
+        "y": 1.6001318338400718
       },
       "nextControl": null,
       "isLocked": false,
-      "linkedName": "Neutral End"
+      "linkedName": "Outpost (Nose In)"
     }
   ],
   "rotationTargets": [
     {
-      "waypointRelativePos": 1.0,
-      "rotationDegrees": 25.0
+      "waypointRelativePos": 0.158506224066387,
+      "rotationDegrees": 42.06442899332791
+    },
+    {
+      "waypointRelativePos": 0.521991701244812,
+      "rotationDegrees": -155.69576489737352
     }
   ],
   "constraintZones": [
     {
       "name": "Constraints Zone",
-      "minWaypointRelativePos": 0.6848635235731944,
-      "maxWaypointRelativePos": 1.1334987593052148,
+      "minWaypointRelativePos": 0.7282878411910672,
+      "maxWaypointRelativePos": 1.0,
       "constraints": {
-        "maxVelocity": 2.5,
+        "maxVelocity": 1.5,
         "maxAcceleration": 3.0,
         "maxAngularVelocity": 540.0,
         "maxAngularAcceleration": 720.0,
@@ -68,19 +56,8 @@
   "pointTowardsZones": [],
   "eventMarkers": [
     {
-      "name": "Bump Angle for Left Neutral",
-      "waypointRelativePos": 0.5022332506203392,
-      "endWaypointRelativePos": null,
-      "command": {
-        "type": "named",
-        "data": {
-          "name": "IntakeArmBumpAngle"
-        }
-      }
-    },
-    {
-      "name": "Extend and intake for left neutral",
-      "waypointRelativePos": 1.0,
+      "name": "Start Intake",
+      "waypointRelativePos": 0.5330024813895744,
       "endWaypointRelativePos": null,
       "command": {
         "type": "named",
@@ -99,13 +76,13 @@
     "unlimited": false
   },
   "goalEndState": {
-    "velocity": 3.0,
-    "rotation": 90.0
+    "velocity": 0,
+    "rotation": -179.22577983507205
   },
   "reversed": false,
   "folder": null,
   "idealStartingState": {
-    "velocity": 0.0,
+    "velocity": 0,
     "rotation": 42.0282331684253
   },
   "useDefaultConstraints": false
